@@ -34,7 +34,7 @@ class _QuizScreenState extends State<QuizScreen>{
           height: height * 0.85,
         ),
       ),
-    ))
+    ));
   }
 
 }
