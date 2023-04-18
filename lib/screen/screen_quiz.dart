@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 import '../model/model_quiz.dart';
 
 class QuizScreen extends StatefulWidget {
