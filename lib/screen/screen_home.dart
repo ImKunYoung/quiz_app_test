@@ -20,6 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.deepPurple,
         leading: Container(),
       ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Center(child: Image.asset(''),) // TODO: - Add image
+        ],
+      ),
     ));
   }
 }
