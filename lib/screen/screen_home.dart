@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app_test/screen/screen_quiz.dart';
 
 import '../model/model_quiz.dart';
 
@@ -73,7 +74,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.deepPurple,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen(quizs: quizs),),);
+                    },
                     child: const Text(
                       '지금 퀴즈 풀기',
                       style: TextStyle(color: Colors.white, fontSize: 20),
