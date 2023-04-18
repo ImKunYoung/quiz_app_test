@@ -8,13 +8,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery
-        .of(context)
-        .size;
+    Size screenSize = MediaQuery.of(context).size;
     double width = screenSize.width;
     double height = screenSize.height;
 
-    return SafeArea(child: Scaffold(
+    return SafeArea(
+        child: Scaffold(
       appBar: AppBar(
         title: const Text('My Quiz App'),
         backgroundColor: Colors.deepPurple,
@@ -29,6 +28,15 @@ class _HomeScreenState extends State<HomeScreen> {
             'images/quiz.jpg',
             width: width * 0.8,
           )),
+          Padding(padding: EdgeInsets.all(width * 0.024)),
+          Text(
+            'Welcome to My Quiz App',
+            style: TextStyle(fontSize: width * 0.065, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            '퀴즈를 풀기 전 안내사항입니다. \n 꼼꼼히 읽고 퀴즈 풀기를 눌러주세요.',
+            textAlign: TextAlign.center,),
+          Padding(padding: EdgeInsets.all(width * 0.048)),
         ],
       ),
     ));
