@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
 
+import '../model/model_quiz.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  List<Quiz> quizs = [
+    Quiz.fromMap({
+      'title': 'What is the capital of Korea?',
+      'candidates': ['Seoul', 'Busan', 'Incheon', 'Jeju'],
+      'answer': 0
+    }),
+    Quiz.fromMap({
+      'title': 'What is the capital of USA?',
+      'candidates': ['New York', 'Washington', 'Los Angeles', 'Chicago'],
+      'answer': 1
+    }),
+    Quiz.fromMap({
+      'title': 'What is the capital of Mexico?',
+      'candidates': ['Mexico City', 'Guadalajara', 'Monterrey', 'Cancun'],
+      'answer': 0
+    }),
+  ];
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
